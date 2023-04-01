@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:p="http://www.springframework.org/schema/p"
+    xsi:schemaLocation="
+        http://www.springframework.org/schema/beans 
+	  http://www.springframework.org/schema/beans/spring-beans.xsd
+	  http://www.springframework.org/schema/context
+	  http://www.springframework.org/schema/context/spring-context.xsd">
+	  
+	  <context:annotation-config/>
+	  
+	  <bean class="auto.wair.Address" name="address">
+	  	<property name="city" value="Kolkata"/>
+	  	<property name="homeNo" value="12/A - J.B.Road"/>
+	  	<property name="pin" value="700003"/>
+	  </bean>
+	  
+	  <bean class="auto.wair.Emp" name="emp" autowire="constructor"></bean>
+	  <bean class="auto.wair.Emp" name="emp1" autowire="byType"></bean>
+	  <bean class="auto.wair.Emp" name="emp2" autowire="byName"></bean>
+	  
+
+	  
+</beans>
